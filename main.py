@@ -17,7 +17,7 @@ SHOUNAK_EMAIL_PASSWORD = os.environ.get("SHOUNAK_EMAIL_PASSWORD")
 COMPANY_EMAIL = os.environ.get("COMPANY_EMAIL")
 Bootstrap(app)
 
-conf_data = [SHOUNAK_EMAIL, COMPANY_EMAIL]
+# conf_data = [SHOUNAK_EMAIL, COMPANY_EMAIL]
 
 import nltk
 nltk.download('vader_lexicon')
@@ -27,11 +27,11 @@ sid = SentimentIntensityAnalyzer()
 def sent_analyser(sentence):
     score = sid.polarity_scores(sentence)['compound']
     if score > 0.34:
-        return ['👍','Positive Sentiment']
+        return ['👍😀👍😀','Positive Sentiment']
     elif score < -0.35:
-        return ['👎','Negative Sentiment']
+        return ['👎😡👎😡','Negative Sentiment']
     else:
-        return ['✊','Neutral Sentiment']
+        return ['✊😐✊😐','Neutral Sentiment']
 
 
 # print(os.environ.get("SHOUNAK_EMAIL"))
@@ -56,7 +56,7 @@ def send_email(name, email, phone, message):
 
 @app.route("/")
 def home():
-    return render_template('index.html', conf_data=conf_data)
+    return render_template('index.html')
 
 
 
