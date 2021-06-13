@@ -6,10 +6,6 @@ from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, URL, Email, Length
 import smtplib
 import os
-from boto.s3.connection import S3Connection
-
-# s3 = S3Connection(os.environ['FLASK_SECRET_KEY'], os.environ['SHOUNAK_EMAIL'],
-#                   os.environ['SHOUNAK_EMAIL_PASSWORD'], os.environ['COMPANY_EMAIL'])
 
 
 #FLASK_SECRET_KEY="hello"
@@ -37,7 +33,7 @@ def sent_analyser(sentence):
         return ['✊','Neutral Sentiment']
 
 
-print(environ.get("SHOUNAK_EMAIL"))
+# print(os.environ.get("SHOUNAK_EMAIL"))
 
 def send_email(name, email, phone, message):
     with smtplib.SMTP('smtp.gmail.com') as connection:
@@ -73,7 +69,7 @@ def contact():
 
     return render_template("contact.html")
 
-@app.route("/form_submit", methods=["POST"])
+@app.route("/form_submit", methods=["POST","GET"])
 def form_submit():
     responder_name = request.form["responder_name"]
     responder_email = request.form["responder_email"]
