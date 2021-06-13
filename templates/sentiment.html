@@ -1,0 +1,43 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!-- Page Header -->
+<header class="masthead"
+        style="background-image: url({{ url_for('static', filename='img/sentiment.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Sentiment Analysis</h1>
+                    <span class="subheading">Analyse the sentence into Positive, Neutral and Negative<br>
+            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container" id="sentiment_id">
+    <div class="row">
+
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+            <div class="post-preview">
+                <h2 class="post-title">
+                    Input the Sentence/Sentiment
+                </h2>
+            </div>
+            <form action="{{ url_for('sentiment',_anchor='sentiment_id') }}" method="POST">
+                {{ wtf.quick_form(sentiment_analysis_input, novalidate=True, button_map={"submit": "primary"}) }}
+            </form>
+<br><br>
+            {{ wtf.quick_form(sentiment_analysis_output, novalidate=True)}}
+            <h1>{{result[0]}}</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+<hr>
+
+{% include "footer.html" %}

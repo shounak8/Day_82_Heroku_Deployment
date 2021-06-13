@@ -1,0 +1,87 @@
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <h2>Write to us:</h2>
+                  <form action="{{ url_for ('form_submit')}}" id="contactForm" name="sentMessage" novalidate method="post">
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Name</label>
+                        <input class="form-control" data-validation-required-message="Please enter your name." id="name"
+                               placeholder="Name" required name="responder_name" type="text">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Email Address</label>
+                        <input class="form-control" data-validation-required-message="Please enter your email address."
+                               id="email" placeholder="Email Address" required name="responder_email" type="email">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Phone Number</label>
+                        <input class="form-control" data-validation-required-message="Please enter your phone number."
+                               id="phone" placeholder="Phone Number (optional)" name="responder_phone" type="tel">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Message</label>
+                        <textarea class="form-control" data-validation-required-message="Please enter a message."
+                                  id="message" placeholder="Message" name="responder_message" required rows="5"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <button class="btn btn-primary" id="sendMessageButton" type="submit">Send</button>
+            </form>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/8Shounak8">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/shounak.deshpande">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/shounak8">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+            <hr>
+          <p class="copyright text-muted">Copyright &copy; Indomitable Tech 2021</p>
+            <p class="copyright text-muted" style="font-size:10px;margin:0;">image attribution: rawpixel.com for brick background | coolvector for hexagonal background | pikisuperstar for contact us background</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{ url_for('static', filename='js/clean-blog.min.js')}}"></script>
+
+</body>
+
+</html>
