@@ -27,11 +27,11 @@ sid = SentimentIntensityAnalyzer()
 def sent_analyser(sentence):
     score = sid.polarity_scores(sentence)['compound']
     if score > 0.34:
-        return ['👍😀👍😀','Positive Sentiment']
+        return ['👍😀','Positive Sentiment']
     elif score < -0.35:
-        return ['👎😡👎😡','Negative Sentiment']
+        return ['👎😡','Negative Sentiment']
     else:
-        return ['✊😐✊😐','Neutral Sentiment']
+        return ['✊😐','Neutral Sentiment']
 
 
 # print(os.environ.get("SHOUNAK_EMAIL"))
