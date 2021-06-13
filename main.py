@@ -16,10 +16,10 @@ from boto.s3.connection import S3Connection
 #FLASK_SECRET_KEY="hello"
 app = Flask(__name__)
 #Credentials
-app.secret_key = S3Connection(os.environ["FLASK_SECRET_KEY"])
-SHOUNAK_EMAIL = S3Connection(os.environ["SHOUNAK_EMAIL"])
-SHOUNAK_EMAIL_PASSWORD = S3Connection(os.environ["SHOUNAK_EMAIL_PASSWORD"])
-COMPANY_EMAIL = S3Connection(os.environ["COMPANY_EMAIL"])
+app.secret_key = os.environ.get("FLASK_SECRET_KEY")
+SHOUNAK_EMAIL = os.environ.get("SHOUNAK_EMAIL")
+SHOUNAK_EMAIL_PASSWORD = os.environ.get("SHOUNAK_EMAIL_PASSWORD")
+COMPANY_EMAIL = os.environ.get("COMPANY_EMAIL")
 Bootstrap(app)
 
 
