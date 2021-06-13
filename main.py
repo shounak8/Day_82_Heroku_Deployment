@@ -5,7 +5,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, URL, Email, Length
 import smtplib
-from os import environ
 import os
 from boto.s3.connection import S3Connection
 
