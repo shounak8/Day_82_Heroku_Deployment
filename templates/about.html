@@ -1,0 +1,113 @@
+{% include "header.html" %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url({{ url_for('static', filename='img/about-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>About Us</h1>
+                    <span class="subheading">This is what We do.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <p>
+                Founded in August 2020 by a passionate duo of Technology Enthusiasts, Indomitable Tech provides business
+                solutions in a variety of fields.
+            </p>
+            <p>
+                Co-Founders
+                <span style="font-size: 15px;">
+                    (please click on the name to see the bio)
+                </span>
+            </p>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="margin:0;">
+                        <img src="{{ url_for('static', filename='img/sharvari.jpg')}}"
+                             style="border-radius: 50%;width: 150px;">
+                        <br>
+                        <a href="https://www.linkedin.com/in/sharvari-ballal-8b967a114/" style="color:#231e23;font-weight: bold;text-decoration: underline;">Sharvari
+                            Ballal</a><span style="font-size: 12px;"> (MCA, BSc)</span></br>
+
+                        <div class="container" style="text-align:left;margin:auto;">
+
+                            <span style="font-size: 15px;font-weight: bold;">EXPERTISE</span>
+                            <div class="col" style="font-size: 12px;margin:auto;">
+                                <p style="margin:0;">Data Science</p>
+                                <p style="margin:0;">Web Development</p>
+                                <p style="margin:0; width=100%;">AIML</p>
+
+                            </div>
+                            <span style="font-size: 15px;font-weight: bold;">CERTIFICATIONS</span>
+                            <div class="col" style="font-size: 12px;margin:auto;">
+                                <p style="margin:0;">Python</p>
+                                <p style="margin:0;">AIML</p>
+                                <p style="margin:0;">Web Development</p>
+                                <p style="margin:0;">Data Science</p>
+                                <p style="margin:0;">Management (Digital Marketing)</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col" style="margin:auto;">
+                        <img src="{{ url_for('static', filename='img/shounak.jpg')}}"
+                             style="border-radius: 50%;width: 150px;-webkit-filter: grayscale(100%);filter: grayscale(100%);">
+                        <br>
+                        <a href="https://www.linkedin.com/in/shounak-deshpande-ab80b0105/" style="color:#231e23;font-weight: bold;text-decoration: underline;">Shounak
+                            Deshpande</a><span style="font-size: 12px;"> (MBA, BE)</span></br>
+
+                        <div class="container" style="text-align:left;margin:auto;">
+
+                            <span style="font-size: 15px;font-weight: bold;">EXPERTISE</span>
+                            <div class="col" style="font-size: 12px;margin:auto;">
+                                <p style="margin:0;">Python</p>
+                                <p style="margin:0;">Web Development</p>
+                                <p style="margin:0; width=100%;">AIML</p>
+
+                            </div>
+                            <span style="font-size: 15px;font-weight: bold;">CERTIFICATIONS</span>
+                            <div class="col" style="font-size: 12px;margin:auto;">
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#PY"><p
+                                        style="margin:0;text-decoration:underline;">Python</p></a>
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#AIML"><p
+                                        style="margin:0;text-decoration:underline;">AIML</p></a>
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#WEB"><p
+                                        style="margin:0;text-decoration:underline;">Web Development</p></a>
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#DS"><p
+                                        style="margin:0;text-decoration:underline;">Data Science</p></a>
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#NN"><p
+                                        style="margin:0;text-decoration:underline;">Neural Networking</p></a>
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#NLP"><p
+                                        style="margin:0;text-decoration:underline;">Natural Language Processing</p></a>
+                                <a href="https://shounak8.github.io/WebPage/certificates.html#HR"><p
+                                        style="margin:0;text-decoration:underline;">Management (HR, Digital
+                                    Marketing)</p></a>
+                            </div>
+                            <div class="col" style="font-size: 18px;margin:auto;color:#f21170;">
+                                <a href="{{url_for('download')}}" style="color:#ff005c;"><p>Download Resume</p></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+{% include "footer.html" %}
