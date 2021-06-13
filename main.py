@@ -17,6 +17,7 @@ SHOUNAK_EMAIL_PASSWORD = os.environ.get("SHOUNAK_EMAIL_PASSWORD")
 COMPANY_EMAIL = os.environ.get("COMPANY_EMAIL")
 Bootstrap(app)
 
+conf_data = [SHOUNAK_EMAIL, COMPANY_EMAIL]
 
 import nltk
 nltk.download('vader_lexicon')
@@ -55,7 +56,7 @@ def send_email(name, email, phone, message):
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template('index.html', conf_data=conf_data)
 
 
 
